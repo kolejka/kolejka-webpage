@@ -1,0 +1,96 @@
+@import url(roboto.css);
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(0, 81, 157);
+    background: linear-gradient(rgb(0,51,99), rgb(0, 81, 157));
+    color: rgb(0, 81, 157);
+}
+#main {
+    display: block;
+    width: 84%;
+    margin: 0 auto;
+    padding: 1% 3%;
+    background-color: rgb(255, 255, 255);
+}
+#footer {
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(204, 204, 204);
+    color: rgb(102, 102, 102);
+    margin-top: 20px;
+    font-size: 12px;
+}
+#copyright {
+}
+#contact {
+    float: right;
+}
+
+#matinf_plaque {
+    display: block;
+    width: 500px;
+    height: 70px;
+    /*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+    font-weight: 200;
+    color: rgb(0, 81, 157);
+}
+#matinf_plaque a {
+    color: inherit;
+    text-decoration-line: none;
+}
+#matinf_plaque_logo {
+    height: 70px;
+    width: 50px;
+    float: left;
+    padding: auto;
+    text-align: center;
+}
+#matinf_plaque_text {
+    margin-left: 50px;
+    height: 70px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    padding-left: 5px;
+}
+#matinf_plaque_text_1 {
+    font-size: 18px;
+}
+#matinf_plaque_text_2 {
+    font-size: 12px;
+}
+
+#kolejka_plaque {
+    display: block;
+    width: 300px;
+    height: 70px;
+}
+#kolejka_plaque a {
+    color: inherit;
+    text-decoration-line: none;
+}
+#kolejka_plaque_logo {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+#kolejka_plaque_text {
+    margin-left: 70px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.info {
+    padding: 20px;
+    color: rgb(85, 85, 85);
+}
