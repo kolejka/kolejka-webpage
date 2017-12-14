@@ -94,3 +94,10 @@ body {
     padding: 20px;
     color: rgb(85, 85, 85);
 }
+
+pre {
+    padding: 20px;
+    font-size: 12pt;
+    background: rgb(0, 0, 0);
+    color: rgb(78, 154, 6);
+}
