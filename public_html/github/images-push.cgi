@@ -10,7 +10,7 @@ if [ "${QUERY_STRING}" != "secret=${SECRET}" ]; then
     exit
 fi
 
-screen -dmS github-push-kolejka "${HOME}/bin/github-push-kolejka"
+screen -dmS github-push-images "${HOME}/bin/github-push-images"
 
 echo "Content-Length: 2"
 echo ""
