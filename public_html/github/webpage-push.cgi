@@ -3,15 +3,17 @@
 
 if [ "${HOME}" == "" ]; then
     HOME="$(getent passwd |grep "^$(whoami):" |cut -d : -f 6)"
+    export HOME
 fi
 
 SECRET="$(cat ${HOME}/github_secret)"
 
 if [ "${QUERY_STRING}" != "secret=${SECRET}" ]; then
+    echo "Status: 403 Forbidden"
     echo "Content-Length: 4"
     echo ""
     echo "FAIL"
-    exit
+    exit 
 fi
 
 screen -dmS github-push-webpage "${HOME}/bin/github-push-webpage"
