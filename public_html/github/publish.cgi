@@ -1,6 +1,10 @@
 #!/bin/bash
 # vim:ts=4:sts=4:sw=4:expandtab
 
+if [ "${HOME}" == "" ]; then
+    HOME="$(getent passwd |grep "^$(whoami):" |cut -d : -f 6)"
+fi
+
 SECRET="$(cat ${HOME}/github_secret)"
 
 if [ "${QUERY_STRING}" != "secret=${SECRET}" ]; then
