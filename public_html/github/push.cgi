@@ -36,7 +36,7 @@ with secret_path.open() as secret_file:
 if os.environ.get('QUERY_STRING','') != 'secret={}'.format(secret):
     result(403, 'Forbidden', 'FAIL')
 
-if len(sys.argv) < 1 or sys.argv[1].upper() != 'POST':
+if os.environ.get('REQUEST_METHOD','').upper() != 'POST':
     result(403, 'Forbidden', 'FAIL')
 
 body = sys.stdin.read()
