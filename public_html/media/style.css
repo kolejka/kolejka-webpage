@@ -100,4 +100,5 @@ pre {
     font-size: 12pt;
     background: rgb(0, 0, 0);
     color: rgb(78, 154, 6);
+    overflow-x: scroll;
 }

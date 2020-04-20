@@ -34,13 +34,17 @@
             <div class="info">
                 Sample <b><tt><a href="config/kolejka.conf">kolejka.conf</a></tt></b> with test server configuration is available <a href="config/kolejka.conf">here</a>.
                 To use it, simply download it and place in the subfolder <b><tt>.config/kolejka</tt></b> in your home folder.
+<pre>
+mkdir -p "${HOME}/.config/kolejka"
+curl -s -L -o "${HOME}/.config/kolejka/kolejka.conf" "https://kolejka.matinf.uj.edu.pl/config/kolejka.conf"
+</pre>
             </div>
             <div class="info">
                 Kolejka system is now able to use almost any docker image as a task image.
                 There is no need for kolejka system images anymore.
             </div>
             <div class="info">
-                Project is available for download from <a href="https://pypi.python.otg/pypi">pypi</a>.
+                Project is available for download from <a href="https://pypi.python.org/pypi">pypi</a>.
 <pre>
 pip3 install KolejkaWorker KolejkaClient
 </pre>
@@ -48,10 +52,15 @@ pip3 install KolejkaWorker KolejkaClient
 
             <div class="info">
                 The project ubuntu package repository is available on <a href="https://launchpad.net/~kolejka/+archive/ubuntu/kolejka">Launchpad</a>.
-                To use the repository:
+                To use the repository, first install <a href="https://docker.com">Docker</a>:
 <pre>
-sudo add-apt-repository ppa:kolejka/kolejka
-sudo apt-get update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 7EA0A9C3F273FCD8
+sudo add-apt-repository --update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep CODENAME /etc/lsb-release |cut -d = -f 2) stable"
+sudo apt-get install docker-ce
+</pre>
+                Then add PPA repository and install Kolejka Client and Worker packages:
+<pre>
+sudo add-apt-repository --update ppa:kolejka/kolejka
 sudo apt-get install python3-kolejkaworker python3-kolejkaclient
 </pre>
             </div>
@@ -72,7 +81,7 @@ sudo apt-get install python3-kolejkaworker python3-kolejkaclient
                 The system is intended to unify and supersede <em>satori</em> and <em>baca</em> computational grids.
             </div>
             <div id="footer">
-                <span id="copyright">© 2017-2019 Jagiellonian University</span>
+                <span id="copyright">© 2017-2020 Jagiellonian University</span>
                 <span id="contact">Contact: Grzegorz Gutowski</span>
             </div>
         </div>
